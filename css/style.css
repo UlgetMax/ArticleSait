@@ -60,11 +60,20 @@ header {
 }
 .header__img {
 }
+
+.header__burger {
+    display: none;
+}
 .header__navigation {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 32px;
 }
+
+
+
+
 .header__navigation__item {
     color: #17191C;
     font-size: 16px;
@@ -106,10 +115,12 @@ header {
 }
 .main__imgMan {
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .main__imgPC {
     margin-bottom: 64px;
+    text-align: center;
 }
 
 .main__sectionBlock {
@@ -325,7 +336,14 @@ table td:first-child {
     font-weight: 500;
 
 }
+.hideList-footer::after {
+    position: absolute;
+    top: -3px;
+    content: url("../img/icons/hide.svg");
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
 .row-item ul{
+    position: relative;
     display: flex;
     gap: 33px;
 }
@@ -336,6 +354,7 @@ table td:first-child {
     width: 312px;
 }
 .footer__info__contact__block {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -356,6 +375,8 @@ table td:first-child {
 .footer__info__contact__messanger::after {
     content: '';
     display: inline-block;
+    top: 0px;
+    bottom: 0px;
     width: 0.1rem;
     height: 1.4rem;
     background: #ffffff;
@@ -398,3 +419,124 @@ table td:first-child {
 }
 
 
+@media (max-width: 767px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        height: 30px;
+        width: 30px;
+    }
+    .header__burger span {
+        position: absolute;
+        background-image: url("../img/burger-menu.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        cursor: pointer;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .header__row__btnsBurger {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .container{
+        max-width: 720px;
+        margin: 0px 24px;
+        display: block;
+    }
+    .main__imgMan img {
+        width: 720px;
+    }
+    .main__imgPC img {
+        width: 720px;
+    }
+    .main__sectionBlock {
+        display: block;
+    }
+    .main__sectionBlock p, h1, ul, .main__sectionSalary p, h1, table {
+        width: 720px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1060px) {
+    .main__imgMan img,
+    .main__imgPC img {
+        width: 720px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 766px) {
+    
+    .main__imgMan,
+    .main__imgPC {
+        text-align: start;
+    }
+    .main__imgMan img,
+    .main__imgPC img {
+        width: 600px;
+    }
+    
+
+    .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
+    .main__sectionSalary p, .main__sectionSalary h1, .main__sectionSalary table {
+        width: 600px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 650px) {
+    .main__imgMan,
+    .main__imgPC {
+        text-align: start;
+    }
+    .main__imgMan img,
+    .main__imgPC img {
+        width: 288px;
+    }
+    
+
+    .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
+    .main__sectionSalary p, .main__sectionSalary h1, .main__sectionSalary table {
+        width: 288px;
+    }
+
+    .container{
+        max-width: 720px;
+        margin: 0px 16px;
+        display: block;
+    }
+
+    .header__btn {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .main__imgMan,
+    .main__imgPC {
+        text-align: start;
+    }
+    .main__imgMan img,
+    .main__imgPC img {
+        width: 288px;
+    }
+    
+
+    .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
+    .main__sectionSalary p, .main__sectionSalary h1, .main__sectionSalary table {
+        width: 288px;
+    }
+
+    .container{
+        max-width: 720px;
+        margin: 0px 16px;
+        display: block;
+    }
+}
