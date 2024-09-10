@@ -238,7 +238,9 @@ table td:first-child {
     margin-top: 47.5px;
     margin-bottom: 64px;
 }
-
+.main__iconsEmotions img {
+    cursor: pointer;
+}
 
 .main__slider {
     background: rgba(116, 182, 255, 0.15);
@@ -482,6 +484,9 @@ table td:first-child {
     .main__imgPC img {
         width: 600px;
     }
+    .main__iconsEmotions img{
+        display: none;
+    }
     
 
     .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
@@ -499,6 +504,9 @@ table td:first-child {
     .main__imgMan img,
     .main__imgPC img {
         width: 288px;
+    }
+    .main__iconsEmotions {
+        flex-wrap: wrap;
     }
     
 
@@ -538,5 +546,8 @@ table td:first-child {
         max-width: 720px;
         margin: 0px 16px;
         display: block;
+    }
+    .main__iconsEmotions {
+        flex-wrap: wrap;
     }
 }
