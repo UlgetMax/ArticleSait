@@ -249,6 +249,8 @@ table td:first-child {
 .main__slider__wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .main__slider h1 {
     text-align: center;
@@ -262,21 +264,44 @@ table td:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .main__slider__wrapper__rowSlide__item {
+    width: 328px;
+    color: inherit;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 4px 8px 0px #8993A426;
+    display: block; 
+    transition: 0.4s ease-in;
 
 }
+.main__slider__wrapper__rowSlide__item:hover {
+    box-shadow: 0px 12px 10px 0px #8993A450;
+}
+
+.main__slider__wrapper__rowSlide__item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+
 .main__slider__wrapper__rowSlide__item__text {
     margin: 20.28px 15.09px 20.23px 17.89px;
-    width: 294px;
+    /* width: 294px; */
     color: #17191C;
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
 }
+
+.main__slider__wrapper__slide {
+    display: none;
+}
+
 
 .main__emailWrapper {
     display: flex;
@@ -462,6 +487,9 @@ table td:first-child {
     .main__sectionBlock {
         display: block;
     }
+    .main__sectionSalary {
+        display: block;
+    }
     .main__sectionBlock p, h1, ul, .main__sectionSalary p, h1, table {
         width: 720px;
     }
@@ -472,6 +500,46 @@ table td:first-child {
     .main__imgPC img {
         width: 720px;
     }
+    .main__slider__wrapper__rowSlide__item {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+    .main__slider__wrapper__rowSlide__item:nth-child(3) {
+        display: none; 
+    }
+    .container{
+        margin: 0px 24px;
+    }
+
+    .main__slider__wrapper__slide {
+        display: block;
+        width: 65px;
+        height: 12px;
+        margin-top: 24px;
+    }
+    
+    .main__slider__wrapper__slide span {
+        background-color: #B0BAAF;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        top: 9px;
+        margin-right: 5px;   
+        cursor: pointer;
+    }
+    
+    .main__slider__wrapper__slide span:last-child {
+        margin-right: 0; 
+    }
+    
+    .main__slider__wrapper__slide .slide-active {
+        width: 20px;
+        height: 6px;
+        background-color: #1874FF;
+        border-radius: 10px;
+    }
+    
 }
 
 @media (min-width: 650px) and (max-width: 766px) {
@@ -488,11 +556,53 @@ table td:first-child {
         display: none;
     }
     
-
+    .main__sectionSalary {
+        display: block;
+    }
     .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
     .main__sectionSalary p, .main__sectionSalary h1, .main__sectionSalary table {
         width: 600px;
     }
+
+
+    .main__slider__wrapper__rowSlide__item {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+    .main__slider__wrapper__rowSlide__item:nth-child(3) {
+        display: none; 
+    }
+
+
+    .main__slider__wrapper__slide {
+        display: block;
+        width: 65px;
+        height: 12px;
+        margin-top: 24px;
+    }
+    
+    .main__slider__wrapper__slide span {
+        background-color: #B0BAAF;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        top: 9px;
+        margin-right: 5px;   
+        cursor: pointer;
+    }
+    
+    .main__slider__wrapper__slide span:last-child {
+        margin-right: 0; 
+    }
+    
+    .main__slider__wrapper__slide .slide-active {
+        width: 20px;
+        height: 6px;
+        background-color: #1874FF;
+        border-radius: 10px;
+    }
+    
 
 }
 
@@ -524,6 +634,46 @@ table td:first-child {
     .header__btn {
         display: none;
     }
+
+    .main__slider__wrapper__rowSlide__item {
+        flex: 1 1 calc(100% - 20px); 
+        max-width: calc(100% - 20px);
+        width: 288px;
+    }
+    .main__slider__wrapper__rowSlide__item:nth-child(3),
+    .main__slider__wrapper__rowSlide__item:nth-child(2) {
+        display: none; 
+    }
+
+    .main__slider__wrapper__slide {
+        display: block;
+        width: 65px;
+        height: 12px;
+        margin-top: 24px;
+    }
+    
+    .main__slider__wrapper__slide span {
+        background-color: #B0BAAF;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        top: 9px;
+        margin-right: 5px;   
+        cursor: pointer;
+    }
+    
+    .main__slider__wrapper__slide span:last-child {
+        margin-right: 0; 
+    }
+    
+    .main__slider__wrapper__slide .slide-active {
+        width: 20px;
+        height: 6px;
+        background-color: #1874FF;
+        border-radius: 10px;
+    }
+    
 }
 
 @media (max-width: 320px) {
@@ -550,4 +700,45 @@ table td:first-child {
     .main__iconsEmotions {
         flex-wrap: wrap;
     }
+
+    .main__slider__wrapper__rowSlide__item {
+        flex: 1 1 calc(100% - 20px); 
+        max-width: calc(100% - 20px);
+        width: 288px;
+    }
+    .main__slider__wrapper__rowSlide__item:nth-child(3),
+    .main__slider__wrapper__rowSlide__item:nth-child(2) {
+        display: none; 
+    }
+
+
+    .main__slider__wrapper__slide {
+        display: block;
+        width: 65px;
+        height: 12px;
+        margin-top: 24px;
+    }
+    
+    .main__slider__wrapper__slide span {
+        background-color: #B0BAAF;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        top: 9px;
+        margin-right: 5px;   
+        cursor: pointer;
+    }
+    
+    .main__slider__wrapper__slide span:last-child {
+        margin-right: 0; 
+    }
+    
+    .main__slider__wrapper__slide .slide-active {
+        width: 20px;
+        height: 6px;
+        background-color: #1874FF;
+        border-radius: 10px;
+    }
+    
 }
