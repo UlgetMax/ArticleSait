@@ -92,7 +92,8 @@ header {
 .style_btn {
     color: #fff;
     background-color: #1874FF;
-    padding: 8px 16px;
+    padding: 8px 0px;
+    width: 114px;
     border-radius: 8px;
 }
 
@@ -307,7 +308,6 @@ table td:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 56px;
 
     padding-top: 64px;
     padding-bottom: 64px;
@@ -317,11 +317,13 @@ table td:first-child {
     line-height: 26px;
     font-weight: 300;
     max-width: 291px;
+    margin-right: 56px;
 }
 
 .main__emailWrapper form input {
     box-shadow: 0px 4px 8px 0px #8993A426;
-    padding: 7px 111px 7px 16px;
+    padding: 7px 0px 7px 16px;
+    width: 233px;
     border-radius: 8px;
     margin-right: 8px;
     font-size: 18px;
@@ -330,6 +332,13 @@ table td:first-child {
 
 .main__emailWrapper form input::placeholder {
     color: #B4B5B8;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.main__btn {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /* Footer */
@@ -446,7 +455,7 @@ table td:first-child {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .header__burger {
         display: block;
         position: relative;
@@ -492,6 +501,14 @@ table td:first-child {
     }
     .main__sectionBlock p, h1, ul, .main__sectionSalary p, h1, table {
         width: 720px;
+    }
+
+    .main__emailWrapper p {
+        margin-right: 0px;
+    }
+
+    .main__emailWrapper {
+        justify-content: space-between;
     }
 }
 
@@ -542,7 +559,7 @@ table td:first-child {
     
 }
 
-@media (min-width: 650px) and (max-width: 766px) {
+@media (min-width: 650px) and (max-width: 767px) {
     
     .main__imgMan,
     .main__imgPC {
@@ -604,6 +621,22 @@ table td:first-child {
     }
     
 
+    .main__emailWrapper {
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+    }
+    .main__emailWrapper form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .main__emailWrapper form input {
+        width: 288px;
+    }
+
 }
 
 @media (min-width: 320px) and (max-width: 650px) {
@@ -619,6 +652,9 @@ table td:first-child {
         flex-wrap: wrap;
     }
     
+    .main__sectionBlock p, .main__sectionSalary p {
+        font-size: 16px;
+    }
 
     .main__sectionBlock p, .main__sectionBlock h1, .main__sectionBlock ul, 
     .main__sectionSalary p, .main__sectionSalary h1, .main__sectionSalary table {
@@ -672,6 +708,22 @@ table td:first-child {
         height: 6px;
         background-color: #1874FF;
         border-radius: 10px;
+    }
+
+    .main__emailWrapper {
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+    }
+    .main__emailWrapper form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .main__emailWrapper form input {
+        width: 288px;
     }
     
 }
@@ -739,6 +791,23 @@ table td:first-child {
         height: 6px;
         background-color: #1874FF;
         border-radius: 10px;
+    }
+
+
+    .main__emailWrapper {
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+    }
+    .main__emailWrapper form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .main__emailWrapper form input {
+        width: auto;
     }
     
 }
