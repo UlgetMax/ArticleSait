@@ -36,7 +36,6 @@ ul li{list-style: none;}
 body {
     font-family: 'Rubik';
     color: #2F353D;
-    ;
 }
 
 
@@ -46,7 +45,12 @@ body {
 header {
     padding: 12px 0px;
     border-bottom: 1px solid #DFE1E6;
-    margin-bottom: 96px;
+    background-color: #fff;
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
 }
 .container {
     max-width: 1024px;
@@ -113,6 +117,7 @@ header {
 
     width: 100%;
     margin-bottom: 48px;
+    margin-top: 96px;
 }
 .main__imgMan {
     margin-bottom: 24px;
@@ -808,6 +813,10 @@ table td:first-child {
 
     .main__emailWrapper form input {
         width: auto;
+    }
+
+    .header__btn {
+        display: none;
     }
     
 }
