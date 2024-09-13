@@ -972,7 +972,7 @@ table td:first-child {
 
     .footer__copyright {
         margin-top: 32px;
-        font-size: 12px;
+        font-size: 14px;
         display: block;
         text-align: center;
     }
@@ -1086,4 +1086,74 @@ table td:first-child {
         display: none;
     }
     
+
+    .footer__info {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+
+    .footer__info__program {
+        grid-row-start: auto;
+        grid-row-end: auto;
+    }
+    .footer__info__contact {
+        grid-row-start: auto;
+        grid-row-end: auto;
+        justify-self: flex-start;
+        margin-top: 48px;
+    }
+    .footer__info__about {
+        grid-row-start: auto;
+        grid-row-end: auto;
+        margin: 16px 0 0 0;
+        justify-self: flex-start;
+    }
+
+    .footer__info__contact__addres,
+    .footer__info__contact__addres p,
+    .footer__info__contact__num {
+        margin-top: 16px;
+    }
+    .footer__info__police {
+        grid-row-start: auto;
+        grid-row-end: auto;
+        margin: 48px 0px 0px 0px;
+        justify-self: flex-start;
+        /* width: auto; */
+    }
+
+    .footer__info__police a,
+    .footer__info__police p {
+        font-size: 12px;
+    }
+
+    .footer__copyright {
+        margin-top: 32px;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+    }
+    .footer__info__contact__block {
+        display: block;
+    }
+    
+    .footer__info__contact__block__messanger::after {
+        content: '';
+        display: inline-block;
+        width: 0rem;
+        height: 0rem;
+        background: #ffffff;
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+    .footer__copyright {
+        margin-top: 24px;
+    }
+    .footer__copyright p {
+        margin-bottom: 8px;
+    }
+    .footer__copyright p:last-child {
+        margin: 0px;
+    }
 }
