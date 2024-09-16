@@ -82,6 +82,10 @@ header {
     color: #17191C;
     font-size: 16px;
     font-weight: 400;
+    transition: 0.3s ease-in;
+}
+.header__navigation__item:hover {
+    color: #1874FF;
 }
 
 .hideList::after {
@@ -99,6 +103,11 @@ header {
     padding: 8px 0px;
     width: 114px;
     border-radius: 8px;
+    transition: 0.3s ease-out;
+}
+.style_btn:hover {
+    background-color: #202328;
+    color: #fff;
 }
 
 
@@ -122,11 +131,15 @@ header {
 .main__imgMan {
     margin-bottom: 24px;
     text-align: center;
+    /* width: 1024px; */
+    height: auto;
 }
 
 .main__imgPC {
     margin-bottom: 64px;
     text-align: center;
+    /* width: 1024px; */
+    height: auto;
 }
 
 .main__sectionBlock {
@@ -179,6 +192,10 @@ header {
 }
 .textLink {
     color: #1874FF;
+    transition: 0.3s ease-in;
+}
+.textLink:hover {
+    color: #202328;
 }
 
 .main__sectionSalary {
@@ -220,6 +237,7 @@ table td {
 table th:first-child,
 table td:first-child {
     border-left: 1px solid #CBCBCB;
+    text-align: left;
 }
 
 table tr:last-child td {
@@ -231,10 +249,6 @@ table td {
     text-align: center;
 }
 
-table th:first-child,
-table td:first-child {
-    text-align: left;
-}
 .main__iconsEmotions {
     display: flex;
     justify-content: center;
@@ -246,6 +260,12 @@ table td:first-child {
 }
 .main__iconsEmotions img {
     cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+.main__iconsEmotions img:hover {
+    box-shadow: 0px 4px 8px 5px #c3c4c626;
+
 }
 
 .main__slider {
@@ -277,14 +297,15 @@ table td:first-child {
     width: 328px;
     color: inherit;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px 0px #8993A426;
+    border-radius: 22px;
+    box-shadow: 0px 4px 18px 0px #8993A426;
     display: block; 
     transition: 0.4s ease-in;
 
 }
 .main__slider__wrapper__rowSlide__item:hover {
-    box-shadow: 0px 12px 10px 0px #8993A450;
+    box-shadow: 0px 12px 10px 12px #8993A450;
+    width: 350px;
 }
 
 .main__slider__wrapper__rowSlide__item img {
@@ -495,6 +516,11 @@ table td:first-child {
 
 .footer__info__program__block__item {
     margin: 0px 33px 0px 0px;
+    transition: 0.3s ease-in;
+}
+.footer__info__program__block__item:hover,
+.footer__info__contact__addres a:hover {
+    color: #5b9bfb;
 }
 .footer__info__program__block__item:nth-child(2) {
     margin: 0px;
@@ -527,6 +553,7 @@ table td:first-child {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
+    transition: 0.3s ease-in;
 }
 .footer__info__contact__block__messanger img {
     margin-right: 17px;
@@ -662,10 +689,10 @@ table td:first-child {
         display: block;
     }
     .main__imgMan img {
-        width: 720px;
+        width: 600px;
     }
     .main__imgPC img {
-        width: 720px;
+        width: 600px;
     }
     .main__sectionBlock {
         display: block;
@@ -720,7 +747,7 @@ table td:first-child {
 @media (min-width: 768px) and (max-width: 1060px) {
     .main__imgMan img,
     .main__imgPC img {
-        width: 720px;
+        width: 600px;
     }
     .main__slider__wrapper__rowSlide__item {
         flex: 1 1 calc(50% - 20px); 
