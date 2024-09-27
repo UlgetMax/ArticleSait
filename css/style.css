@@ -303,10 +303,10 @@ table td {
     transition: 0.4s ease-in;
 
 }
-.main__slider__wrapper__rowSlide__item:hover {
+/* .main__slider__wrapper__rowSlide__item:hover {
     box-shadow: 0px 12px 10px 12px #8993A450;
     width: 350px;
-}
+} */
 
 .main__slider__wrapper__rowSlide__item img {
     width: 100%; 
